@@ -4,9 +4,15 @@ import PropTypes from 'prop-types'
 const ArticleList = props => {
   return (
     <ul>
-      {props.articles.map(article => (
-        <li key={article.slug}>ArticleListItem component goes here</li>
-      ))}
+      <div>
+        {props.articles.map(article => (
+          <li key={article.slug}>
+            <strong>{article.title}</strong>
+            <p>{article.shortText}</p>
+            <p><time dateTime={article.pubYear}>{article.pubDate}</time><button onClick={() => alert(article.slug)}>show article slug</button></p>
+          </li>
+        ))}
+      </div>
     </ul>
   );
 };
@@ -14,4 +20,5 @@ const ArticleList = props => {
 ArticleList.propTypes = {
   articles: PropTypes.array.isRequired
 };
+
 export default ArticleList;
