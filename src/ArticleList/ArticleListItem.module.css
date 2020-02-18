@@ -16,3 +16,19 @@
     font-weight: bold;
     font-size: smaller;
 }
+
+.image {
+    float: left;
+}
+
+.clear {
+    clear: both;
+}
+
+.button{
+    margin-right: 10px;
+    margin-bottom: 20px;
+    font-size: 32px;
+    float: right;
+}
+

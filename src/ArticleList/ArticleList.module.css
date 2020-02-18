@@ -5,3 +5,7 @@
     background: #999;
     border: 1px dashed #666;
 }
+
+.image {
+    float: left;
+}
