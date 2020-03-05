@@ -11,11 +11,11 @@ const ArticleListItem = props => {
       </div>
       <div>
         <h3 className={styles.title}>{props.article.title}</h3>
-        <p>{props.article.shortText}</p>
+        <p className={styles.shortText}>{props.article.shortText}</p>
         <time className={styles.pubDate} dateTime={props.article.pubYear}>{props.article.pubDate}</time>
       </div>
-      <div>
-      <SlugButton className={styles.button} slug={props.article.slug} buttonText={props.article.author} />
+      <div className={styles.button}>
+      <SlugButton slug={props.article.slug} buttonText={props.article.author} />
       </div>
       <div className={styles.clear}></div>
     </div>
