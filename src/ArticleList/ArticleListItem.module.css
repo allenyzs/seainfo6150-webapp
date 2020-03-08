@@ -1,9 +1,32 @@
-.container {
-    background: #eee;
-    border: 1px solid #c00;
-    margin-bottom: 20px;
-    padding: 10px;
-    position: relative;
+.container{
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+}
+
+.image{
+    margin-top: 25px;
+    margin-right: 20px;
+    margin-left: 20px;
+    width:400px;
+    height:170px;
+}
+
+.button{
+    height:100px;
+}
+
+.pubDate {
+    font-weight: bolder;
+    font-size: 40px;
+    width:350px;
+    height:100px;
+}
+
+.shortText{
+    font-size: 23px;
+    width:350px;
+    height:280px;
 }
 
 .title {
@@ -12,7 +35,103 @@
     margin: .5rem 0;
 }
 
-.pubDate {
-    font-weight: bold;
-    font-size: smaller;
+.clear {
+    clear: both;
 }
+
+@media only screen and (min-width: 768px) {   
+    [class*="image"] {  
+        width: 60%;  
+    }  
+
+    [class*="container"] {  
+        width: 100%;  
+    } 
+    
+    [class*="shortText"] {  
+        font-size: 110%;  
+        width: 70%;
+        color:rgb(201, 26, 207);
+        font-weight: bold;   
+    } 
+
+    [class*="title"] {  
+        font-size: 110%;  
+        width: 70%;
+        color:rgb(35, 35, 194);
+        font-family: Courier New;
+    }  
+ 
+    [class*="pubDate"] {  
+        width: 50%;  
+        font-size: 120%;
+        color:rgb(223, 152, 22);
+        font-style: italic; 
+    }  
+}  
+
+@media only screen and (min-width: 1024px) {  
+    [class*="image"] {  
+        width: 60%;  
+    }  
+
+    [class*="container"] {  
+        width: 70%; 
+        height: 70%; 
+    } 
+
+    [class*="title"] {  
+        font-size: 110%;  
+        width: 60%; 
+        color:rgb(128, 128, 128);
+        font-family: Courier New; 
+    }  
+
+    [class*="shortText"] {  
+        font-size: 150%;  
+        width: 80%;  
+        color:rgb(12, 170, 12);
+        font-style: italic;
+    }
+
+    [class*="pubDate"] {  
+        width: 50%;  
+        font-size: 150%; 
+        color:rgb(200, 255, 0);
+        font-style: italic;  
+    }  
+ 
+}
+
+@media only screen and (max-width: 2560px) { 
+    [class*="image"] {  
+        width: 60%;
+        height:60%;
+    }  
+
+    [class*="title"] {  
+        font-size: 120%;  
+        width: 70%; 
+        color:purple;
+        font-family: Courier New; 
+    }  
+
+    [class*="shortText"] {  
+        font-size: 120%;  
+        width: 80%;  
+        color:rgb(0, 92, 128);
+        font-style: italic;
+    } 
+
+    [class*="pubDate"] {  
+        width: 30%;  
+        font-size: 120%;  
+        color:rgb(0, 255, 55);
+        font-style: italic; 
+    }
+      
+    [class*="container"] {  
+        width: 70%;  
+    }  
+}  
+
